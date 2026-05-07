@@ -1,3 +1,5 @@
+//* 1
+
 const filterEvenNumbers = (numArray: number[]): number[] => {
   const evenNum = numArray.filter((num) => num % 2 === 0);
   return evenNum;
@@ -89,3 +91,13 @@ class Student extends Person {
 
 // const student = new Student("Alice", 20, "A");
 // console.log(student.getDetails());
+
+//* 7
+
+const getIntersection = (arr1: number[], arr2: number[]): number[] => {
+  const set = new Set(arr1);
+  const newArr = arr2.filter((num) => set.has(num));
+  return newArr;
+};
+
+// console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
