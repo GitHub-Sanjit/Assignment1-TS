@@ -1,13 +1,7 @@
-//* 1
-
 const filterEvenNumbers = (numArray: number[]): number[] => {
   const evenNum = numArray.filter((num) => num % 2 === 0);
   return evenNum;
 };
-
-// console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]));
-
-//*  2
 
 const reverseString = (str: string): string => {
   const lastChar = str.length - 1;
@@ -17,10 +11,6 @@ const reverseString = (str: string): string => {
   }
   return reverseStr;
 };
-
-// console.log(reverseString("typescript"))
-
-//* 3
 
 type StringOrNumber = string | number;
 
@@ -32,19 +22,9 @@ const checkType = (input: StringOrNumber): string => {
   }
 };
 
-// console.log(checkType(42));
-// console.log(checkType("Hello"));
-
-//* 4
-
 const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
   return obj[key];
 };
-
-// const user = { id: 1, name: "John Doe", age: 21 };
-// console.log(getProperty(user, "name"));
-
-//* 5
 
 interface Book {
   title: string;
@@ -64,9 +44,6 @@ const myBook = {
   author: "Jane Doe",
   publishedYear: 2024,
 };
-// console.log(toggleReadStatus(myBook));
-
-//* 6
 
 class Person {
   name: string;
@@ -89,15 +66,8 @@ class Student extends Person {
   }
 }
 
-// const student = new Student("Alice", 20, "A");
-// console.log(student.getDetails());
-
-//* 7
-
 const getIntersection = (arr1: number[], arr2: number[]): number[] => {
   const set = new Set(arr1);
   const newArr = arr2.filter((num) => set.has(num));
   return newArr;
 };
-
-// console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
