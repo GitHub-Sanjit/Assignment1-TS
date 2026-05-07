@@ -18,3 +18,17 @@ const reverseString = (str: string): string => {
 
 // console.log(reverseString("typescript"))
 
+//* 3
+
+type StringOrNumber = string | number;
+
+const checkType = (input: StringOrNumber): string => {
+  if (typeof input === "string") {
+    return "String";
+  } else {
+    return "Number";
+  }
+};
+
+// console.log(checkType(42));
+// console.log(checkType("Hello"));
